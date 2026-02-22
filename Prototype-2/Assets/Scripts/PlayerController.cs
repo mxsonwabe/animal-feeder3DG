@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     if (_attackAction.WasPressedThisFrame())
     {
       // launch projectile
-      Debug.Log("Projectile launched!!");
       Instantiate(projectileObject, transform.position + Vector3.up, projectileObject.transform.rotation);
     }
   }
@@ -39,7 +38,7 @@ public class PlayerController : MonoBehaviour
     Vector2 moveValue = move.Get<Vector2>();
     _movX = moveValue.x;
     _movZ = moveValue.y;
-    Debug.Log("move: <" + moveValue.x + ", " + moveValue.y + ">");
+    //Debug.Log("move: <" + moveValue.x + ", " + moveValue.y + ">");
   }
 
   void Move()
