@@ -1185,6 +1185,7 @@ GameObject:
   - component: {fileID: 8011174919153173182}
   - component: {fileID: 8609523279960543577}
   - component: {fileID: 2882759503024857609}
+  - component: {fileID: 5543893578311183507}
   m_Layer: 0
   m_Name: Animal_Chicken_White
   m_TagString: Untagged
@@ -1293,11 +1294,23 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5543893578311183507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163053600361873003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d4480fce9ad07ab988fcd79c95bc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecectCollision
 --- !u!1 &8310679011477996345
 GameObject:
   m_ObjectHideFlags: 0

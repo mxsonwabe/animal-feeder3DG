@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         _startDelay = 3.0f;
-        _spawnFreq = 2.5f;
+        _spawnFreq = 0.5f;
         _spawnAction = InputSystem.actions.FindAction("Spawn");
         InvokeRepeating(nameof(SpawnRandomAnimal), _startDelay, _spawnFreq);
     }
