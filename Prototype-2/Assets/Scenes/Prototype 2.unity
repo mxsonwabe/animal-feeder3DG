@@ -982,10 +982,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Stag_01
       objectReference: {fileID: 0}
-    - target: {fileID: 4737970556671281883, guid: 19bfbaf8ea9d75e4db6ff1b0ab26a52e, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1651116398}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -999,10 +995,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5588469525387131928, guid: 086b6ac27aea6624788eeb8c7fb7543e, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1651116398}
     - target: {fileID: 6881656755332099641, guid: 086b6ac27aea6624788eeb8c7fb7543e, type: 3}
       propertyPath: m_Name
       value: Dog_SaintBernard_01
@@ -1104,10 +1096,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Animal_Stag_02
       objectReference: {fileID: 0}
-    - target: {fileID: 8847381226461983119, guid: 270d13fc620f74a4696fe1e08aaf3e6b, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1651116398}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1218,10 +1206,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8011174919153173182, guid: a7ccf32896888c149bdbf2a834d5f6c4, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1651116398}
     - target: {fileID: 8163053600361873003, guid: a7ccf32896888c149bdbf2a834d5f6c4, type: 3}
       propertyPath: m_Name
       value: Animal_Chicken_White
