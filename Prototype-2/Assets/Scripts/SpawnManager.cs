@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
         Vector3 pos = new (
             Random.Range(UtilsManager.minX, UtilsManager.maxX),
             0.0f,
-            Random.Range(UtilsManager.minZ, UtilsManager.maxZ)
+            Random.Range(UtilsManager.minZ + (UtilsManager.maxZ / 2.0f), UtilsManager.maxZ)
         );
         Instantiate(
             animalPrefabs[animalIdx],
