@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 4966779460516236661}
   m_Layer: 0
   m_Name: Animal_Stag_01
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db3f105cddf61841be7a2ba4d4cfe29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 6
+  speed: 4
 --- !u!65 &87699231872857765
 BoxCollider:
   m_ObjectHideFlags: 0

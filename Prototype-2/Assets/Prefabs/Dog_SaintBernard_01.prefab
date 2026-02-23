@@ -4535,7 +4535,7 @@ GameObject:
   - component: {fileID: 6123866454769688613}
   m_Layer: 0
   m_Name: Dog_SaintBernard_01
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4626,7 +4626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db3f105cddf61841be7a2ba4d4cfe29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 8
+  speed: 5
 --- !u!65 &1058729339231639095
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,10 +16,21 @@ public class AnimalController : MonoBehaviour
     transform.Translate(Vector3.forward * speed * Time.deltaTime);
     if (transform.position.z < UtilsManager.minZ)
     {
-      Destroy(gameObject);
       // player dies when animal runs through
-      // Destroy(player);
-      Debug.Log("GameOver!!");
+      // but we also clear the animal in the screen
+      GameManager.Instance.Loselife();
+      if (GameManager.Instance.lives <= 0)
+      {
+        Debug.Log("GameOver!!");
+        Destroy(player);
+      }
+    }
+    else if (
+      transform.position.x < UtilsManager.minX ||
+      transform.position.x > UtilsManager.maxX)
+    {
+      // animal went off screen on the side so delete it
+      Destroy(gameObject);
     }
   }
 }

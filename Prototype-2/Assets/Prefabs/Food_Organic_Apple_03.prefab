@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2245008057540122417}
   - component: {fileID: 8187929322533617329}
   - component: {fileID: 3286136961303814191}
+  - component: {fileID: -3770725416224231415}
   m_Layer: 0
   m_Name: Food_Organic_Apple_03
-  m_TagString: Untagged
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,3 +154,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3770725416224231415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6869589371702164394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d4480fce9ad07ab988fcd79c95bc7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecectCollision

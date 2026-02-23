@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 5543893578311183507}
   m_Layer: 0
   m_Name: Animal_Chicken_White
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db3f105cddf61841be7a2ba4d4cfe29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 14
+  speed: 7
 --- !u!65 &8609523279960543577
 BoxCollider:
   m_ObjectHideFlags: 0
