@@ -3,8 +3,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
   public static GameManager Instance;
-  public float lives { get; private set; }
-  public float score { get; private set; }
+  int lives { get; set; }
+  int score { get; set; }
   
   void Awake()
   {
@@ -35,14 +35,19 @@ public class GameManager : MonoBehaviour
     Debug.Log($"Score: {score}");
   }
 
-  public void Loselife()
+  public void LoseLife()
   {
     lives--;
     Debug.Log($"Lives: {lives}");
-    if (lives == 0)
-    {
-      Debug.Log($"Gameover: {lives}");
-      Debug.Log($"Score: {score}");
-    }
+    if (lives <= 0)
+      GameOver();
+  }
+
+  public void GameOver() 
+  {
+    Debug.Log($"Game Over! Final Score: {score}");
+    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    if (player) Destroy(player);
+    Time.timeScale = 0f;
   }
 }

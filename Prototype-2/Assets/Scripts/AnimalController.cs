@@ -18,12 +18,9 @@ public class AnimalController : MonoBehaviour
     {
       // player dies when animal runs through
       // but we also clear the animal in the screen
-      GameManager.Instance.Loselife();
-      if (GameManager.Instance.lives <= 0)
-      {
-        Debug.Log("GameOver!!");
-        Destroy(player);
-      }
+      GameManager.Instance.LoseLife();
+      // animal went off screen on the side so delete it
+      Destroy(gameObject);
     }
     else if (
       transform.position.x < UtilsManager.minX ||

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -55,10 +56,23 @@ public class PlayerController : MonoBehaviour
     // place them in the correct position within the boundary
     transform.position = pos;
   }
-  // just another implementation i was trying out outside of the direct action referrence. it also works.
-  //void OnAttack()
-  //{
-  //  // Launch projectile from player
-  //  Debug.Log("Attacked!");
-  //}
+
+  public void TriggerBounce(Vector3 animalPos)
+  {
+    StartCoroutine(BoundEffect(animalPos));
+  }
+  IEnumerator BoundEffect(Vector3 animalPos)
+  {
+    // calculate direction away from animal
+    Vector3 bounceDirection = (transform.position - animalPos).normalized;
+    float bounceDistance = 3.5f;
+    float elapsed = 0;
+    float duration = 0.5f;
+    while (elapsed < duration)
+    {
+      transform.Translate(bounceDirection * bounceDistance *  Time.deltaTime);
+      elapsed += Time.deltaTime;
+      yield return null; // wait one frame then continue
+    }
+  }
 }

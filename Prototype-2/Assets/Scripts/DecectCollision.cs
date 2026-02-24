@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class DecectCollision : MonoBehaviour
 {
+  PlayerController playerController;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
-
+    playerController = GetComponent<PlayerController>();
   }
 
   // Update is called once per frame
@@ -28,14 +29,17 @@ public class DecectCollision : MonoBehaviour
       Debug.Log("Food hit an animal!");
       Destroy(gameObject);       // destroy the food projectile
       Destroy(other.gameObject); // destroy the animal
+      GameManager.Instance.AddScore();
       return;
     }
 
     // Case 3: Player touches Animal — destroy the player (game over)
     if (gameObject.CompareTag("Player") && other.gameObject.CompareTag("Animal"))
     {
+      GameManager.Instance.LoseLife();
+      if (playerController)
+        playerController.TriggerBounce(other.gameObject.transform.position);
       Destroy(other.gameObject); // destroy the animal
-      Destroy(gameObject);       // destroy the player
       return;
     }
   }
