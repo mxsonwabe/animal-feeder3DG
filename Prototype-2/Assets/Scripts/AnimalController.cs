@@ -3,10 +3,14 @@ using UnityEngine;
 public class AnimalController : MonoBehaviour
 {
   public float speed;
+  public float maxHealth;
+  private float health;
   private GameObject player;
+  [SerializeField] FloatingHealthBar healthBar;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
+    health = maxHealth;
     player = GameObject.FindGameObjectWithTag("Player");
   }
 
@@ -29,5 +33,17 @@ public class AnimalController : MonoBehaviour
       // animal went off screen on the side so delete it
       Destroy(gameObject);
     }
+  }
+
+  public bool ApplyDamage()
+  {
+    health -= 1.0f;
+    if (healthBar)
+      healthBar.UpdateHealthBar(health, maxHealth);
+    if (health <= 0f)
+    {
+      return false;
+    }
+    return true;
   }
 }

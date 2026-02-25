@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEngine;
 
 public class DecectCollision : MonoBehaviour
@@ -7,6 +8,7 @@ public class DecectCollision : MonoBehaviour
   void Start()
   {
     playerController = GetComponent<PlayerController>();
+    Debug.Log("Getting Health bar");
   }
 
   // Update is called once per frame
@@ -26,11 +28,20 @@ public class DecectCollision : MonoBehaviour
     // Case 2: Food touches Animal — destroy both (the "shooting" mechanic)
     if (gameObject.CompareTag("Food") && other.gameObject.CompareTag("Animal"))
     {
-      Debug.Log("Food hit an animal!");
       Destroy(gameObject);       // destroy the food projectile
-      //other.GetComponent<AnimalHealthBar>().ApplyDamage(1);
-      Destroy(other.gameObject); // destroy the animal
-      GameManager.Instance.AddScore();
+      AnimalController animalController = other.GetComponent<AnimalController>();
+      if (!animalController)
+        Debug.LogError("No COntrooler");
+      if (animalController)
+      {
+        Debug.Log("Animal Controller: Food hit an animal!");
+        if (!animalController.ApplyDamage())
+        {
+          Debug.Log("Food hit an animal!");
+          GameManager.Instance.AddScore();
+          Destroy(other.gameObject); // destroy the animal
+        }
+      }
       return;
     }
 
