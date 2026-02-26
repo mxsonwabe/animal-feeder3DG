@@ -30,17 +30,13 @@ public class DecectCollision : MonoBehaviour
     {
       Destroy(gameObject);       // destroy the food projectile
       AnimalController animalController = other.GetComponent<AnimalController>();
-      if (!animalController)
-        Debug.LogError("No COntrooler");
-      if (animalController)
+      if (!animalController) return;
+      Debug.Log("Animal Controller: Food hit an animal!");
+      if (!animalController.ApplyDamage())
       {
-        Debug.Log("Animal Controller: Food hit an animal!");
-        if (!animalController.ApplyDamage())
-        {
-          Debug.Log("Food hit an animal!");
-          GameManager.Instance.AddScore();
-          Destroy(other.gameObject); // destroy the animal
-        }
+        Debug.Log("Food killed an animal!");
+        GameManager.Instance.AddScore();
+        Destroy(other.gameObject); // destroy the animal
       }
       return;
     }

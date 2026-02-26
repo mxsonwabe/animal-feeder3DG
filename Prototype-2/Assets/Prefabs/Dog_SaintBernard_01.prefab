@@ -275,7 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c036a3cc256af146beffad4004b341c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloatingHealthBar
+  target: {fileID: 7075458824056421489}
   slider: {fileID: 4575543373071655399}
+  offset: {x: 0, y: 5, z: 0}
 --- !u!1 &575121289370602889
 GameObject:
   m_ObjectHideFlags: 0
